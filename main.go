@@ -13,6 +13,10 @@ func main() {
 		"/",
 		handlers.IndexHandler{},
 	)
+	router.Handle(
+		"/user/{id}",
+		handlers.UserHandler{},
+	)
 	port := "8001"
 	log.Println("Start server on " + port)
 	_ = http.ListenAndServe(":" + port, router)
