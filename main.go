@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/kdmatrosov/go-rest/handlers"
+	h "github.com/kdmatrosov/go-rest/handlers"
 	"log"
 	"net/http"
 )
@@ -11,11 +11,11 @@ func main() {
 	router := mux.NewRouter()
 	router.Handle(
 		"/",
-		handlers.IndexHandler{},
+		h.IndexHandler{},
 	)
 	router.Handle(
 		"/user/{id}",
-		handlers.UserHandler{},
+		h.UserHandler{},
 	)
 	port := "8001"
 	log.Println("Start server on " + port)

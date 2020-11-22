@@ -3,13 +3,13 @@ package handlers
 import (
 	"encoding/json"
 	"github.com/gorilla/mux"
-	"github.com/kdmatrosov/go-rest/models"
+	m "github.com/kdmatrosov/go-rest/models"
 	"net/http"
 )
 
 // UserHandler is called with localhost:8001/user/:id
 type UserHandler struct{}
-var userWithoutDb = []models.User{
+var userWithoutDb = []m.User{
 	{
 		Id:    "1",
 		Name:  "Kirill",
